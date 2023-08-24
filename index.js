@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-cont key = process.env.key
+const key = process.env.key
 
 app.all('/', (req, res) => {
     console.log("Just got a request!")
