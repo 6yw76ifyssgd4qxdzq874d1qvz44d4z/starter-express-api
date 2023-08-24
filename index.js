@@ -6,8 +6,8 @@ app.all('/', (req, res) => {
     res.send('Yo!')
 })
 
-const users = ["shadow.no.money", "test"]
-const bannis = ["127.0.1.1"]
+const users = ["shadow.no.money", "diislay"]
+const bannis = []
 
 app.get('/users', function (req, res) {
     res.setHeader('Content-Type', 'text/json');
