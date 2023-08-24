@@ -22,8 +22,14 @@ app.get('/users', function (req, res) {
 });
 
 app.get('/bannis', function (req, res) {
-    res.setHeader('Content-Type', 'text/json');
-    res.status(200).send(bannis)
+    const queryParams = req.query;
+    
+    if (queryParams.name == key) {
+        res.setHeader('Content-Type', 'text/json');
+        res.status(200).send(bannis);
+    } else {
+        res.status(200).send("Non autorisé");
+    }
 });
 
 app.listen(process.env.PORT || 3000)
